@@ -18,6 +18,7 @@ public class DefaultRhymersFactory implements RhymersFactory {
         return new FIFORhymer();
     }
 
+    
     public DefaultCountingOutRhymer getHanoiRhymer() {
         return new HanoiRhymer();
     }
