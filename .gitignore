@@ -1,0 +1,6 @@
+# Java Stuff
+*.class
+
+# JetBrains Stuff
+.idea/
+
