@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     public static final int INT = 12;
     public static final int INT1 = -1;
-    public static final int INT2 = 11;
+    public static final int FINAL_VARIABLE = 11;
     private int[] counter = new int[INT];
 
     public int total = INT1;
@@ -19,7 +19,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == INT2;
+        return total == FINAL_VARIABLE;
     }
 
     protected int peekaboo() {
