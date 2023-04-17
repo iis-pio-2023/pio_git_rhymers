@@ -10,3 +10,4 @@ email = 240696@edu.p.lodz.pl
 /dataSources/
 /dataSources.local.xml
 .idea/
+.target/
