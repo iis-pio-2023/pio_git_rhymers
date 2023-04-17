@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public class defaultCountingOutRhymer {
     public static final int size = 12;
-    private int[] NUMBERS = new int[size];
+    private final int[] NUMBERS = new int[size];
     public int total = -1;
     public void countIn(int in) {
         if (!isFull())
