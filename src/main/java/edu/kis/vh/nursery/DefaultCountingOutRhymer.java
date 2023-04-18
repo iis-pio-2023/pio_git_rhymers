@@ -5,7 +5,7 @@ public class DefaultCountingOutRhymer {
     public static final int TABLE_SIZE = 12;
     public static final int CALL_CHECK_REQ = -1;
     public static final int FULL_REQ = 11;
-    private int[] NUMBERS = new int[TABLE_SIZE];
+    private final int[] NUMBERS = new int[TABLE_SIZE];
 
     public int total = CALL_CHECK_REQ;
 
