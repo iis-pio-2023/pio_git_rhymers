@@ -8,8 +8,13 @@ class RhymersDemo {
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
         
+<<<<<<< HEAD
         DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
+=======
+        DefaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
+                factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
+>>>>>>> f0f136f (4.1 poprawa nazw klas)
         
         for (int i = 1; i < 15; i++)
             for (int j = 0; j < 3; j++)
