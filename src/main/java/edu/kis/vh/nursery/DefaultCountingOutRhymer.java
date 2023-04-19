@@ -2,12 +2,33 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int TABLE_SIZE = 12;
-    public static final int CALL_CHECK_REQ = -1;
-    public static final int FULL_REQ = 11;
-    private final int[] NUMBERS = new int[TABLE_SIZE];
+    private static final int TABLE_SIZE = 12;
+    private static final int CALL_CHECK_REQ = -1;
+    private static final int FULL_REQ = 11;
 
-    public int total = CALL_CHECK_REQ;
+    public static int getTableSize() {
+        return TABLE_SIZE;
+    }
+
+    public static int getCallCheckReq() {
+        return CALL_CHECK_REQ;
+    }
+
+    public static int getFullReq() {
+        return FULL_REQ;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    private final int[] NUMBERS = new int[getTableSize()];
+
+    public int total = getCallCheckReq();
 
     public void countIn(int in) {
         if (!isFull())
@@ -15,22 +36,22 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == CALL_CHECK_REQ;
+        return total == getCallCheckReq();
     }
 
     public boolean isFull() {
-        return total == FULL_REQ;
+        return total == getFullReq();
     }
 
     protected int peekaBoo() {
         if (callCheck())
-            return CALL_CHECK_REQ;
+            return getCallCheckReq();
         return NUMBERS[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return CALL_CHECK_REQ;
+            return getCallCheckReq();
         return NUMBERS[total--];
     }
 
