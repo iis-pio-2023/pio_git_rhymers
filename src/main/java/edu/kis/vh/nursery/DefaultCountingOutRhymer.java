@@ -3,11 +3,12 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
 
     private static final int NUMBERS_SIZE = 12;
-    private static final int NUMBERS_SIZE_FULL = 11;
+    private static final int NUMBERS_SIZE_FULL = NUMBERS_SIZE - 1;
+    private static final int EMPTY_INDEX = -1;
     private static final int ERROR_TOTAL = -1;
     private final int[] numbers = new int[NUMBERS_SIZE];
 
-    private int total = ERROR_TOTAL;
+    public int total = EMPTY_INDEX;
 
     public void countIn(int in) {
         if (!isFull())
@@ -15,7 +16,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == ERROR_TOTAL;
+        return total == EMPTY_INDEX;
     }
 
     public boolean isFull() {
