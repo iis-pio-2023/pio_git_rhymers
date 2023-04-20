@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     public static final int TAB_CAPACITY = 12;
     public static final int STARTING_VALUE = -1;
-    private int[] numbers = new int[TAB_CAPACITY];
+    private final int[] numbers = new int[TAB_CAPACITY];
 
     public int total = STARTING_VALUE;
 
@@ -25,7 +25,7 @@ public class DefaultCountingOutRhymer {
                         return STARTING_VALUE;
                     return numbers[total];
                 }
-            
+
                     public int countOut() {
                         if (callCheck())
                             return STARTING_VALUE;
