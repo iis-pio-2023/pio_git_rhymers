@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class defaultCountingOutRhymer {
+public class DefaultCountingOutRhymer {
 
     private static final int SIZE = 12;
     public static final int INITIAL_VALUE = -1;
