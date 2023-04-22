@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
     public static final int FULL_TABLE = 11;
     public static final int PEEKABOO_WITH_EMPTY_TABLE = -1;
     public static final int COUNT_OUT_WITH_FULL_TABLE = -1;
-    private int[] numbers = new int[NUMBERS_SIZE];
+    private final int[] numbers = new int[NUMBERS_SIZE];
 
     public int total = TOTAL_START_VALUE;
 
