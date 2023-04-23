@@ -4,6 +4,7 @@ public class DefaultCountingOutRhymer {
 
     public static final int MAX_NUMBERS = 12;
     public static final int TOTAL_INIT_VAL = -1;
+    public static final int TOTAL_DEFAULT_VAL = -1;
     private final int[] numbers = new int[MAX_NUMBERS];
 
     private int total = TOTAL_INIT_VAL;
@@ -14,7 +15,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == TOTAL_INIT_VAL;
+        return total == TOTAL_DEFAULT_VAL;
     }
 
     public boolean isFull() {
@@ -23,13 +24,13 @@ public class DefaultCountingOutRhymer {
 
     protected int peekaboo() {
         if (callCheck())
-            return TOTAL_INIT_VAL;
+            return TOTAL_DEFAULT_VAL;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return TOTAL_INIT_VAL;
+            return TOTAL_DEFAULT_VAL;
         return numbers[total--];
     }
 
