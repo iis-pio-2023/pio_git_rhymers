@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
     public final int TAB_SIZE = 12;
-    private int[] numbers = new int[TAB_SIZE];
+    private final int[] numbers = new int[TAB_SIZE];
     final int ERR_CODE = -1;
 
     public int total = -1;
