@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-    public static final int IS_EMPTY = -1;
+    static final int IS_EMPTY = -1;
     Node last;
 
     public void push(int i) {
@@ -15,7 +15,7 @@ public class IntLinkedList {
         }
     }
 
-    public boolean isEmpty() {
+    boolean isEmpty() {
         return last == null;
     }
 
@@ -23,13 +23,13 @@ public class IntLinkedList {
         return false;
     }
 
-    public int top() {
+    private int top() {
         if (isEmpty())
             return IS_EMPTY;
         return last.value;
     }
 
-    public int pop() {
+    private int pop() {
         if (isEmpty())
             return IS_EMPTY;
         int ret = last.value;
