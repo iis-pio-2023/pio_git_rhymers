@@ -5,6 +5,11 @@ public class DefaultCountingOutRhymer {
     private static final int SIZE = 12;
     private static final int EMPTY = -1;
     private static final int DEFAULT_VALUE = -1;
+
+    public int getTotal() {
+        return total;
+    }
+
     private static final int MAX_CAPACITY = 11;
     private final int[] numbers = new int[SIZE];
 
