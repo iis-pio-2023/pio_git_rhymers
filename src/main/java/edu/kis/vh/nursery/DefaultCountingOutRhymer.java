@@ -6,7 +6,12 @@ public class DefaultCountingOutRhymer {
 
     public static final int MAX_SIZE  = 12;
     public static final int IS_EMPTY = -1;
-    public int total = IS_EMPTY;
+
+    public int getTotal() {
+        return total;
+    }
+
+    private int total = IS_EMPTY;
 
     public void countIn(int in) {
         if (!isFull())
