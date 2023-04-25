@@ -34,4 +34,11 @@ public class defaultCountingOutRhymer {
                         return NUMBERS[totalNumbers--];
                     }
 
+    public int getTotalNumbers() {
+        return totalNumbers;
+    }
+
+    public void setTotalNumbers(int totalNumbers) {
+        this.totalNumbers = totalNumbers;
+    }
 }
