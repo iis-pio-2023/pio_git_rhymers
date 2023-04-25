@@ -4,8 +4,16 @@ public class DefaultCountingOutRhymer {
 
     private int[] numbers = new int[12];
 
-    public static final int MAX_SIZE  = 12;
-    public static final int IS_EMPTY = -1;
+    private static final int MAX_SIZE  = 12;
+    private static final int IS_EMPTY = -1;
+
+    public static int getMaxSize() {
+        return MAX_SIZE;
+    }
+
+    public static int getIsEmpty() {
+        return IS_EMPTY;
+    }
 
     public int getTotal() {
         return total;
