@@ -37,11 +37,4 @@ public class IntLinkedList {
         return ret;
     }
 
-    public int getI() {
-        return i;
-    }
-
-    public void setI(int i) {
-        this.i = i;
-    }
 }
