@@ -20,10 +20,9 @@ public class DefaultCountingOutRhymer {
 
     public boolean callCheck() {
         return total == TOTAL;
-    }
 
     public boolean isFull() {
-        return total == NUMBER_SIZE;
+        return total == NUMBER_SIZE-1;
     }
 
     protected int peekaboo() {
