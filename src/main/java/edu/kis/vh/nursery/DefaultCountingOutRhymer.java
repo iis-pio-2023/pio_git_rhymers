@@ -8,9 +8,6 @@ public class DefaultCountingOutRhymer {
     private static final int IS_FULL = NUMBERS_AMOUNT - 1;
     private final int[] numbers = new int[NUMBERS_AMOUNT];
 
-    public int getTotal() {
-        return total;
-    }
 
     private int total = -1;
 
