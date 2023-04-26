@@ -22,7 +22,7 @@ public class DefaultCountingOutRhymer {
         return total == NUMBERS_AMOUNT + INITIAL_TOTAL;
     }
 
-    protected int peekaBoo() {
+    protected int peekaboo() {
         if (callCheck())
             return ERROR;
         return numbers[total];
