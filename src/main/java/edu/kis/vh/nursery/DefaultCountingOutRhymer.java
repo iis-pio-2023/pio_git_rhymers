@@ -5,6 +5,25 @@ public class DefaultCountingOutRhymer {
     private static final int CALL_CHECK_REQ = -1;
     private static final int FULL_REQ = 11;
     private int[] NUMBERS = new int[TABLE_SIZE];
+    public static int getTableSize() {
+        return TABLE_SIZE;
+    }
+
+    public static int getCallCheckReq() {
+        return CALL_CHECK_REQ;
+    }
+
+    public static int getFullReq() {
+        return FULL_REQ;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
 
     public int total = -1;
 
