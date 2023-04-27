@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class Node {
+public class Node { // TODO this class is never used, consider removing it
 
     private int value;
     private Node prevNode;

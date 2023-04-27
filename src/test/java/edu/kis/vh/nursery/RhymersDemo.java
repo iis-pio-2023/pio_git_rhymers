@@ -6,11 +6,11 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
 class RhymersDemo {
 
     public static void main(String[] args) {
-        RhymersFactory factory = new DefaultRhymersFactory();
+        RhymersFactory factory = new DefaultRhymersFactory(); // TODO this variable declaration is redundant
         testRhymers(factory);
     }
 
-    private static void testRhymers(RhymersFactory factory) {
+    private static void testRhymers(RhymersFactory factory) { // TODO this method could be split into few smaller methods
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
 
