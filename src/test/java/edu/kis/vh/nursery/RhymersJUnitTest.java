@@ -119,4 +119,47 @@ public class RhymersJUnitTest {
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
 
+    @Test
+    public void hanoiRhymerCountInShouldNotBeRejectedWhenValuesAreInsertedInDescendingOrder() {
+        HanoiRhymer rhymer = new HanoiRhymer();
+        rhymer.countIn(2);
+
+        int result = rhymer.reportRejected();
+        Assert.assertEquals(0, result);
+
+        rhymer.countIn(1);
+        result = rhymer.reportRejected();
+        Assert.assertEquals(0, result);
+    }
+
+    @Test
+    public void hanoiRhymerCountInShouldBeRejectedWhenValuesAreInsertedInAscendingOrder() {
+        HanoiRhymer rhymer = new HanoiRhymer();
+        rhymer.countIn(1);
+
+        int result = rhymer.reportRejected();
+        Assert.assertEquals(0, result);
+
+        rhymer.countIn(2);
+        result = rhymer.reportRejected();
+        Assert.assertEquals(1, result);
+    }
+
+    @Test
+    public void hanoiRhymerCountInShouldAllowToInsertValuesUsingHanoiAlgorithm() {
+        HanoiRhymer rhymer = new HanoiRhymer();
+        rhymer.countIn(1);
+
+        int result = rhymer.reportRejected();
+        Assert.assertEquals(0, result);
+
+        rhymer.countIn(2);
+        result = rhymer.reportRejected();
+        Assert.assertEquals(1, result);
+
+        int previousValue = rhymer.countOut();
+        rhymer.countIn(2);
+        rhymer.countIn(previousValue);
+        Assert.assertEquals(1, result);
+    }
 }
