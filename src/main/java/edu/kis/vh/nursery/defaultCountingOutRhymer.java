@@ -2,42 +2,70 @@ package edu.kis.vh.nursery;
 
 public class defaultCountingOutRhymer {
 
-    private static final int MAX_SIZE  = 12;
-    private static final int IS_EMPTY = -1;
+    /**
+     stala okreslajaca maksymalna wielkosc tablicy na 12
+     */
+    public static final int MAX_SIZE = 12;
 
-    private int[] NUMBERS = new int[MAX_SIZE ];
+    /**
+     stala okreslajaca maksymalny indeks tablicy
+     */
+    public static final int INDEX = MAX_SIZE - 1;
 
-    public int getTotal() {
-        return total;
-    }
+    /**
+     * domyslna wartosc bledu ma -1
+     */
 
-    private int total = -1;
+    public static final int DEFAULT = -1;
 
+    /**
+     * deklaracja tablicy o wielkosci MAX_SIZe
+     */
+    private final int[] NUMBERS = new int[MAX_SIZE];
+
+    public int totalNumbers = -1;
+
+    /**
+     * Funkcja dodajaca nowy element do tablicy
+     */
     public void countIn(int in) {
         if (!isFull())
-            NUMBERS[++total] = in;
+            NUMBERS[++totalNumbers] = in;
+    }
+    public boolean callCheck() {
+        return totalNumbers == DEFAULT;
     }
 
-        public boolean callCheck() {
-            return total == IS_EMPTY;
-        }
 
-            static public int jedenascie = 11;
+    /**
+     * @return
+     * isFull
+     * zwraca wartosc logiczna w zaleznosci od tego czy tablica jest pelna czy nie
+     */
+    public boolean isFull() {
+        return totalNumbers == INDEX;
+    }
 
-            public boolean isFull() {
-                return total == jedenascie;
-            }
-        
-                protected int peekaboo() {
-                    if (callCheck())
-                        return IS_EMPTY;
-                    return NUMBERS[total];
-                }
-            
-                    public int countOut() {
-                        if (callCheck())
-                            return IS_EMPTY;
-                        return NUMBERS[total--];
-                    }
 
+    /**
+     * @return
+     * peekaboo
+     * zwraca ostani element tablicy
+     */
+    protected int peekaboo() {
+        if (callCheck())
+            return DEFAULT;
+        return NUMBERS[totalNumbers];
+    }
+
+
+    /**
+     * countOut
+     * funkcja zwraca i usuwa ostatni element dodany do tablicy
+     */
+    public int countOut() {
+        if (callCheck())
+            return DEFAULT;
+        return NUMBERS[totalNumbers--];
+    }
 }
