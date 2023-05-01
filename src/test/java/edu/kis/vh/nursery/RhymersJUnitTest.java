@@ -2,6 +2,7 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 //testy przechodza
 public class RhymersJUnitTest {
 
@@ -9,6 +10,9 @@ public class RhymersJUnitTest {
     public static final int COUNT_VALUE = 888;
     public static final int STACK_CAPACITY = 12;
     public static final int EMPTY_STACK_VALUE = -1;
+
+
+
     @Test
     public void testCountIn() {
         defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
@@ -62,6 +66,16 @@ public class RhymersJUnitTest {
         Assert.assertEquals(TEST_VALUE, result);
         result = rhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
+    }
+
+    @Test
+    public void testdefaultCountingOutRhymer () {
+        defaultCountingOutRhymer new_rhymer = new defaultCountingOutRhymer();
+        Assert.assertEquals(false,new_rhymer.isFull());
+        for (int i = 0 ; i < 100 ; i++) {
+            new_rhymer.countIn(i);
+        }
+        Assert.assertEquals(true,new_rhymer.isFull());
     }
 
 }
