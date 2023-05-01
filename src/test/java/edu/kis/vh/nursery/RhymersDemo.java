@@ -4,6 +4,8 @@ import edu.kis.vh.nursery.defaultCountingOutRhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
+
+
 //testy przechodza
 class RhymersDemo {
 
