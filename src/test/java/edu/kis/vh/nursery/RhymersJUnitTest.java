@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
-
+//testy przechodza
 public class RhymersJUnitTest {
 
     public static final int TEST_VALUE = 4;
