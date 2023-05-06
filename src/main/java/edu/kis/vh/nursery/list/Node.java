@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery.list;
 
+//TODO This class is never used. Either remove it or find a usage for it
 public class Node {
 
     private final int value;
