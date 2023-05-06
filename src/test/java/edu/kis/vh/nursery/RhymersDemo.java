@@ -7,7 +7,6 @@ class RhymersDemo {
 
     public static final int MAX_VALUE = 15;
     public static final int RHYMERS_SIZE = 3;
-    public static final int MAX_RANDOMISATION_VALUE = 20;
 
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
@@ -21,7 +20,7 @@ class RhymersDemo {
         
         java.util.Random rn = new java.util.Random();
         for (int i = 1; i < MAX_VALUE; i++)
-            rhymers[RHYMERS_SIZE].countIn(rn.nextInt(MAX_RANDOMISATION_VALUE));
+            rhymers[RHYMERS_SIZE].countIn(rn.nextInt(20));
         
         for (int i = 0; i < rhymers.length; i++) {
             while (!rhymers[i].callCheck())
