@@ -7,7 +7,7 @@ public class DefaultRhymer {
 
     public static final int ERROR = -1;
     public static final int FULL = SIZE - 1;
-    private int[] numbers = new int[SIZE];
+    private final int[] numbers = new int[SIZE];
 
     public int total = EMPTY;
 
