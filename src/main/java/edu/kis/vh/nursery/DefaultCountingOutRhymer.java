@@ -58,8 +58,4 @@ public class DefaultCountingOutRhymer {
     public int[] getCounter() {
         return counter;
     }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
 }
