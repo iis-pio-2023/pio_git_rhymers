@@ -10,6 +10,22 @@ public class DefaultCountingOutRhymer {
 
     private int total = EMPTY_RHYMER_INDICATOR;
 
+    public static int getCAPACITY() {
+        return CAPACITY;
+    }
+
+    public static int getReturnValue() {
+        return RETURN_VALUE;
+    }
+
+    public static int getMaxSize() {
+        return MAX_SIZE;
+    }
+
+    public static int getEmptyRhymerIndicator() {
+        return EMPTY_RHYMER_INDICATOR;
+    }
+
     public void countIn(int in) {
         if (!isFull())
             counter[++total] = in;
@@ -37,5 +53,13 @@ public class DefaultCountingOutRhymer {
 
     public int getTotal() {
         return total;
+    }
+
+    public int[] getCounter() {
+        return counter;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
 }
