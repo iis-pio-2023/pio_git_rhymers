@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer
     public static final int MAX_SIZE = 12;
     public static final int EMPTY_RHYMER_INDICATOR = -1;
     public static final int DEFAULT_VALUE = -1;
-    private int[] numbers = new int[MAX_SIZE];
+    final private int[] numbers = new int[MAX_SIZE];
 
     public int total = EMPTY_RHYMER_INDICATOR;
 
