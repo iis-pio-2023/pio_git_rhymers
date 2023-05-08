@@ -4,7 +4,7 @@ public class node {
 
     private final int value;
     private node prev;
-    protected node next;
+    private node next;
 
     public node(int i) {
         value = i;
@@ -20,5 +20,13 @@ public class node {
 
     public void setPrev(node prev) {
         this.prev = prev;
+    }
+
+    public node getNext() {
+        return next;
+    }
+
+    public void setNext(node next) {
+        this.next = next;
     }
 }
