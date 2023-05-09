@@ -9,7 +9,7 @@ public class DefaultRhymer {
     public static final int FULL = SIZE - 1;
     private final int[] numbers = new int[SIZE];
 
-    public int total = EMPTY;
+    private int total = EMPTY;
 
     public void countIn(int in) {
         if (!isFull())
