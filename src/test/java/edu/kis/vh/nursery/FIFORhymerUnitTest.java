@@ -2,6 +2,8 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
+
 public class FIFORhymerUnitTest {
     @Test
     public void testFIFORhymerCountOut() {
@@ -11,12 +13,13 @@ public class FIFORhymerUnitTest {
         rhymer.countIn(3);
 
         int result = rhymer.countOut();
-        Assert.assertEquals(1, result);
+        assertEquals(1, result);
+
 
         rhymer.countIn(4);
         rhymer.countIn(5);
 
         result = rhymer.countOut();
-        Assert.assertEquals(2, result);
+        assertEquals(2, result);
     }
 }
