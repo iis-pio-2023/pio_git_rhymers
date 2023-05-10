@@ -16,11 +16,12 @@ public class DefaultCountingOutRhymer {
         if (!isFull())
             numbers[++total] = in;
     }
-         boolean callCheck() {
+         public boolean callCheck() {
             return total == STARTING_VALUE;
         }
 
              boolean isFull() {
+                // TODO: TAB_CAPACITY-1 Please rename :)
                 return total == TAB_CAPACITY-1;
             }
         
