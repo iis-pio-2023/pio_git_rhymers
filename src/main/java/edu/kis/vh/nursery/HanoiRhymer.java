@@ -16,3 +16,5 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+
+//wszystkie settery sa używane 
