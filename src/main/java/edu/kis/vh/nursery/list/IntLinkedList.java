@@ -5,8 +5,19 @@ public class IntLinkedList {
     public static final int LIST_EMPTY_RETURN_VALUE = -1;
     public static final Node LIST_EMPTY = null;
     public static final boolean LIST_NOT_FULL = false;
-    Node last;
-    int i;
+
+    private class Node {
+
+        public int value;
+        public Node prev, next;
+
+        public Node(int i) {
+            value = i;
+        }
+
+    }
+
+    private Node last;
 
     public void push(int i) {
         if (last == null)
