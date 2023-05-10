@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
 
     private final int[] numbers = new int[STACK_SIZE];
 
-    public int total = EMPTY_STACK;
+    private int total = EMPTY_STACK;
 
     public void countIn(int in) {
         if (!isFull())
@@ -23,7 +23,7 @@ public class DefaultCountingOutRhymer {
         return total == STACK_SIZE - 1;
     }
 
-    protected int peekaboo() {
+    int peekaboo() {
         if (callCheck())
             return RETURN;
         return numbers[total];
