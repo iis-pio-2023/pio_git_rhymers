@@ -6,17 +6,21 @@ public class DefaultCountingOutRhymer {
     public static final int STARTING_VALUE = -1;
     private final int[] numbers = new int[TAB_CAPACITY];
 
-    public int total = STARTING_VALUE;
+    public int getTotal() {
+        return total;
+    }
+
+    private int total = STARTING_VALUE;
 
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
-        public boolean callCheck() {
+         boolean callCheck() {
             return total == STARTING_VALUE;
         }
 
-            public boolean isFull() {
+             boolean isFull() {
                 return total == TAB_CAPACITY-1;
             }
         
@@ -31,5 +35,6 @@ public class DefaultCountingOutRhymer {
                             return STARTING_VALUE;
                         return numbers[total--];
                     }
+
 
 }
