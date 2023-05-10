@@ -21,6 +21,7 @@ public class DefaultCountingOutRhymer {
         }
 
              boolean isFull() {
+                // TODO: TAB_CAPACITY-1 Please rename :)
                 return total == TAB_CAPACITY-1;
             }
         
