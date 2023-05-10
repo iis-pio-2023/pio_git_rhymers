@@ -16,7 +16,7 @@ public class DefaultCountingOutRhymer {
         if (!isFull())
             numbers[++total] = in;
     }
-         boolean callCheck() {
+         public boolean callCheck() {
             return total == STARTING_VALUE;
         }
 
