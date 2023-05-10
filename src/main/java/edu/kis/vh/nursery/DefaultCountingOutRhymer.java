@@ -11,7 +11,7 @@ public class DefaultCountingOutRhymer {
 
     private final int[] numbers = new int[NUMBER_SIZE];
 
-    public int total = TOTAL;
+    private int total = TOTAL;
 
     public void countIn(int in) {
         if (!isFull())
