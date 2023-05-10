@@ -4,7 +4,7 @@ public class defaultCountingOutRhymer {
 
     private final int[] NUMBERS = new int[12];
 
-    public int total = -1;
+    private int total = -1;
 
     public void countIn(int in) {
         if (!isFull())
@@ -35,4 +35,7 @@ public class defaultCountingOutRhymer {
         return NUMBERS[total--];
     }
 
+    public void setTotal(int total) {
+        this.total = total;
+    }
 }
