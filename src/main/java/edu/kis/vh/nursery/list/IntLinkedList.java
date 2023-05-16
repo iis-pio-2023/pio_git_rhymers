@@ -1,7 +1,8 @@
 package edu.kis.vh.nursery.list;
 
-class IntLinkedList {
+public class IntLinkedList {
 
+    public static final int EMPTY = -1;
     private Node last;
     private int i;
 
@@ -30,13 +31,13 @@ class IntLinkedList {
 
     public int top() {
         if (isEmpty())
-            return -1;
+            return EMPTY;
         return last.getValue();
     }
 
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY;
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
