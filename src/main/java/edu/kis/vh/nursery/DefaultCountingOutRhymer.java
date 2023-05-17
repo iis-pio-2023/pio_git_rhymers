@@ -1,12 +1,21 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    private final int STACK_SIZE = 12;
-    private final int RETURN = -1;
-    private final int IS_FULL = 11;
+    public final int STACK_SIZE = 12;
+    public final int RETURN = -1;
+    public final int IS_FULL = 11;
 
     private final int[] NUMBERS = new int[STACK_SIZE];
-    private final int EMPTY_STACK = -1;
+    public final int EMPTY_STACK = -1;
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     public int total = EMPTY_STACK;
 
 

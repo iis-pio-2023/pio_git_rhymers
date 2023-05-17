@@ -8,12 +8,20 @@ public class IntLinkedList {
     /**
      * The Node that exist at the end of the Linked List.
      */
-    Node last;
+    private Node last;
     /**
      * @deprecated
      * Temp value (currently not used).
      */
-    int i;
+    private int i;
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
 
     /**
      * Adds the given number at the end of the Linked List.
@@ -24,9 +32,9 @@ public class IntLinkedList {
         if (last == null)
             last = new Node(i);
         else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
+            last.setNext(new Node(i));
+            last.getPrev().setPrev(last);
+            last = last.getNext();
         }
     }
 
@@ -56,7 +64,7 @@ public class IntLinkedList {
     public int top() {
         if (isEmpty())
             return -1;
-        return last.value;
+        return last.getValue();
     }
     /**
      * Returns the number at the end of the list removing it form the Linked List.
@@ -67,8 +75,8 @@ public class IntLinkedList {
     public int pop() {
         if (isEmpty())
             return -1;
-        int ret = last.value;
-        last = last.prev;
+        int ret = last.getValue();
+        last = last.getPrev();
         return ret;
     }
 
