@@ -17,27 +17,30 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
-        
+        testRhymers(factory);
+    }
+
+    private static void testRhymers(Rhymersfactory factory){
         DefaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
                 factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
-        
+
         for (int i = FIRST_COUNTED_VALUE; i < FIRST_UNCOUNTED_VALUE; i++)
             for (int j = 0; j < RHYMER_TYPES_END; j++)
                 rhymers[j].countIn(i);
-        
+
         java.util.Random rn = new java.util.Random();
         for (int i = RANDOM_NUMBER_LOOP_STARTING_VALUE; i < RANDOM_NUMBER_COUNTER; i++)
             rhymers[HANOI_RHYMER_INDEX].countIn(rn.nextInt(MAX_RANDOM_NUMBER_VALUE));
-        
+
         for (int i = 0; i < rhymers.length; i++) {
             while (!rhymers[i].callCheck())
                 System.out.print(rhymers[i].countOut() + SPACING);
             System.out.println();
         }
-        
+
         System.out.println(REJECTED_HEADER
                 + ((HanoiRhymer) rhymers[HANOI_RHYMER_INDEX]).reportRejected());
-        
+
     }
     
 }
