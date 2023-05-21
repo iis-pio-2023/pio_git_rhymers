@@ -1,9 +1,17 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    public static final int TOTAL_NUMBERS = 12;
-    public static final int ZERO_ELEMENTS = -1;
+    private static final int TOTAL_NUMBERS = 12;
+    private static final int ZERO_ELEMENTS = -1;
     private final int[] numbers = new int[TOTAL_NUMBERS];
+
+    public static int getTotalNumbers() {
+        return TOTAL_NUMBERS;
+    }
+
+    public static int getZeroElements() {
+        return ZERO_ELEMENTS;
+    }
 
     public int getTotal() {
         return total;
