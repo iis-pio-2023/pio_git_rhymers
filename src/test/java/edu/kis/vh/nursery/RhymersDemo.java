@@ -17,6 +17,7 @@ class RhymersDemo {
     /**
      * @param factory testRhymers
      */
+    //TODO: needs refactoring - method shouldn't have 300 lines :)
     private static void testRhymers(Rhymersfactory factory) {
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
