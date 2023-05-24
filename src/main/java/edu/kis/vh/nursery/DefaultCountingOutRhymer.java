@@ -3,12 +3,24 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
 
     private static final int SIZE = 12;
-    public static final int INITIAL_VALUE = -1;
+    private static final int INITIAL_VALUE = -1;
     private static final int TOTAL = -1;
 
     private final int[] NUMBERS = new int[SIZE];
 
-    public int total = TOTAL;
+    private int total = TOTAL;
+
+    public static int getSIZE() {
+        return SIZE;
+    }
+
+    public static int getInitialValue() {
+        return INITIAL_VALUE;
+    }
+
+    public static int getTOTAL() {
+        return TOTAL;
+    }
 
     public void countIn(int in) {
         if (!isFull())
@@ -34,4 +46,13 @@ public class DefaultCountingOutRhymer {
             return INITIAL_VALUE;
         return NUMBERS[total--];
     }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public int[] getNUMBERS() {
+        return NUMBERS;
+    }
+
 }
