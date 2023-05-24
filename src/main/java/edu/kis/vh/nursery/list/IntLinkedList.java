@@ -48,4 +48,14 @@ public class IntLinkedList {
     public void setLastNode(Node lastNode) {
         this.lastNode = lastNode;
     }
+    private static class Node {
+
+        public int value;
+        public Node prevNode, nextNode;
+
+        public Node(int i) {
+            value = i;
+        }
+
+    }
 }
