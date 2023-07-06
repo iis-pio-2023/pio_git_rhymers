@@ -1,23 +1,23 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    public static final int TWELVE = 12;
-    public static final int NEGATIVE_ONE = -1;
+    private static final int TWELVE = 12;
+    private static final int NEGATIVE_ONE = -1;
     public static final int ELEVEN = 11;
     private final int[] NUMBERS = new int[TWELVE];
 
-    public int total = -1;
+    private int total = -1;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return total == NEGATIVE_ONE;
     }
-        
-    public boolean isFull() {
+
+    protected boolean isFull() {
         return total == ELEVEN;
     }
         
@@ -26,8 +26,8 @@ public class DefaultCountingOutRhymer {
             return NEGATIVE_ONE;
         return NUMBERS[total];
     }
-            
-    public int countOut() {
+
+    protected int countOut() {
         if (callCheck())
             return NEGATIVE_ONE;
         return NUMBERS[total--];
